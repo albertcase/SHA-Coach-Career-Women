@@ -1,0 +1,288 @@
+html,body{
+  width: 100%;
+  height: 100%;
+}
+//wrapper
+.wrapper{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  @include size(100%,100%);
+  .page-selectvideo &,
+  .page-form &,
+  .page-videolist &{
+    background: url("../images/selectvideo-bg.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  .page-qa &{
+    background: url("../images/bg.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.content{
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  @include transform(translate(-50%,-50%));
+  width: 100%;
+}
+.logo{
+  @include size(2.75rem,1.02rem);
+  margin: 0 auto 0.4rem;
+}
+.btn{
+  color: #fff;
+  background: #000;
+  padding: 0.15rem 0;
+  margin: 0 auto;
+  width: 2.2rem;
+  text-align: center;
+  font-size: 0.3rem;
+  letter-spacing: 1px;
+}
+
+//qa list
+.qa-list{
+  box-sizing: border-box;
+  @include size(6.74rem,9.13rem);
+  padding: 1.2rem 0.6rem;
+  background: url("../images/layer-bg.png") no-repeat;
+  background-size: 100%;
+  text-align: center;
+  margin: 0 auto;
+  .ordernum{
+    display: inline-block;
+    margin-right: 0.1rem;
+    font-size: 0.5rem;
+    font-style: italic;
+  }
+  .ask{
+    text-align: left;
+    font-size: 0.34rem;
+    margin-bottom: 1rem;
+  }
+  .answer{
+    text-align: left;
+    font-size: 0.26rem;
+    .item{
+      margin-bottom: 0.3rem;
+      padding: 0.2rem 0 0.2rem 0.6rem;
+      &.selected{
+        background: url("../images/icon-selected.png") 6px center no-repeat;
+      }
+      &.unselect{
+        color: #d5d5d5;
+      }
+      .series{
+        margin-right:0.3rem;
+      }
+    }
+  }
+  .btn-go{
+    font-size: 0.3rem;
+    margin-top: 0.5rem;
+  }
+}
+
+
+//for page selectvideo
+.role-content{
+  font-size: 0.28rem;
+  text-align: center;
+  line-height: 1.8;
+  p{
+    margin: 0.3rem 0;
+  }
+  .t1{
+    font-size: 0.36rem;
+    font-weight: bold;
+  }
+  .t2{
+    strong{
+      font-size: 0.3rem;
+      font-weight: bold;
+    }
+  }
+  .t3{
+    font-size: 0.3rem;
+    font-weight: bold;
+
+  }
+  .quotation{
+    display: inline-block;
+    @include size(0.24rem,0.24rem);
+    margin: 0 0.1rem;
+    background: url("../images/icon-quotation.png") no-repeat;
+    background-size: 100%;
+    &.r-quotation{
+      background-position: 0 100%;
+    }
+  }
+
+}
+
+//for video-block
+.page-selectvideo{
+  .video-block{
+    @include size(5.5rem,3rem);
+    margin: 0.8rem auto 1rem;
+  }
+}
+//apply flex layout
+.video-block{
+  position: relative;
+  background: #000;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .btn-play{
+    position: relative;
+    @include size(0.8rem,0.8rem);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: #fff 2px solid;
+    border-radius: 100%;
+    text-align: center;
+    margin: 0 auto;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 55%;
+      top: 50%;
+      @include transform(translate(-50%,-50%));
+      @include size(0,0);
+      border-top:transparent 0.2rem solid;
+      border-bottom:transparent 0.2rem solid;
+      border-left:#fff 0.3rem solid;
+    }
+  }
+}
+
+//for page-videolist
+.page-videolist{
+  .slogan{
+    @include size(4.29rem,0.31rem);
+    margin: 0.4rem auto;
+  }
+  .video-list{
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    @include size(6.31rem,7.25rem);
+    padding: .2rem 0.3rem;
+    box-sizing: border-box;
+    margin: 0 auto 0.7rem;
+    background: url("../images/video-content-bg.png") no-repeat;
+    background-size: 100%;
+    color: #fff;
+    .video-block{
+      background: transparent;
+      height: 33%;
+      width: 50%;
+      box-sizing: border-box;
+      text-align: center;
+      >div{
+        margin-bottom: 0.06rem;
+      }
+      &.video-block-1{
+        width: 47%;
+        height: 60%;
+      }
+      &.video-block-2{
+        width: 47%;
+        height: 40%;
+      }
+      &.video-block-3{
+        width: 53%;
+        height: 28%;
+      }
+      &.video-block-4{
+        height: 42%;
+        width: 53%;
+      }
+      &.video-block-5{
+        height: 30%;
+        width: 53%;
+      }
+      .btn-play{
+        @include size(0.6rem,0.6rem);
+        &:after{
+          border-top:transparent 0.15rem solid;
+          border-bottom:transparent 0.15rem solid;
+          border-left:#fff 0.2rem solid;
+        }
+      }
+
+    }
+  }
+  .btn{
+    width: 4.3rem;
+  }
+}
+
+
+//for form page
+input[type="text"],
+input[type="tel"]{
+  border: #a3a7a3 1px solid;
+  padding: 0.2rem;
+  width: 60vw;
+}
+.page-form .title{
+  text-align: center;
+  font-size: 0.34rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
+  line-height: 1.8;
+}
+#form-contact{
+  text-align: center;
+  font-size: 0.28rem;
+  label{
+    display: inline-block;
+    margin-right: 0.1rem;
+  }
+  .input-box{
+    margin-bottom: 0.8rem;
+  }
+  input[type="text"],
+  input[type="tel"]{
+    font-size: 0.28rem;
+  }
+}
+
+
+//override tencent video
+.videoplayer{
+  .tvp_overlay_play{
+    //border-radius: 100%;
+    position: absolute;
+    width: .8rem;
+    height: .8rem;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    margin: 0 !important;
+  }
+  .tvp_overlay_play_try .tvp_button_play,
+  .tvp_overlay_play .tvp_button_play{
+    top: 25px;
+  }
+}
