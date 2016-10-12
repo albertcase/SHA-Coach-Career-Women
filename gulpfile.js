@@ -15,6 +15,7 @@ var path = {
     template:['./template/*.html'],
     css:['./assets/css/*.css'],
     js:['./assets/js/lib/zepto.min.js','./assets/js/rem.js','./assets/js/qa.js'],
+    selectvjs:['./assets/js/lib/zepto.min.js','./assets/js/rem.js','./assets/js/vjs.js'],
     staticFolder:['./assets/images','./assets/font','./assets/video']
 };
 // Browser-sync
@@ -56,10 +57,18 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
+gulp.task('scripts_vjs', function() {
+    return gulp.src(path.selectvjs)
+        .pipe(concat('vjs2.js'))
+        .pipe(gulp.dest('dist'))
+        .pipe(rename('vjs.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+});
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('assets/js/*.js', ['scripts']);
+    gulp.watch('assets/js/*.js', ['scripts','scripts_vjs']);
     gulp.watch('assets/css/*.css',['css']);
 });
 

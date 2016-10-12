@@ -205,7 +205,6 @@
 
             if(isNext){
                 //    go next
-                console.log(curAskIndex);
                 curAnswerIndex = $('.item.selected').index();
                 addScore(qlist[curAskIndex].answer[curAnswerIndex].tovideo);
 
@@ -219,8 +218,6 @@
                     console.log(window.location.origin);
                 //    比较大小
                     console.log('show'+videoName[compareNum(score)]+'视频');
-
-
 
                 }
             }

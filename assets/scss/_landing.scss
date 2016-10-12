@@ -92,12 +92,11 @@ html,body{
 .role-content{
   font-size: 0.28rem;
   text-align: center;
-  line-height: 1.8;
   p{
-    margin: 0.3rem 0;
+    margin: 0.5rem 0;
   }
   .t1{
-    font-size: 0.36rem;
+    font-size: 0.52rem;
     font-weight: bold;
   }
   .t2{
@@ -106,10 +105,12 @@ html,body{
       font-weight: bold;
     }
   }
-  .t3{
-    font-size: 0.3rem;
-    font-weight: bold;
-
+  .t3,.t4{
+    font-size: 0.26rem;
+    line-height: 1.8;
+  }
+  .t4{
+    margin-bottom: 1rem;
   }
   .quotation{
     display: inline-block;
@@ -128,7 +129,7 @@ html,body{
 .page-selectvideo{
   .video-block{
     @include size(5.5rem,3rem);
-    margin: 0.8rem auto 1rem;
+    margin: 0.5rem auto 0.5rem;
   }
 }
 //apply flex layout

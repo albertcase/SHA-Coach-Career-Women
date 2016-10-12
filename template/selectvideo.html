@@ -10,52 +10,36 @@
     <link rel="stylesheet" type="text/css" href="../dist/css/style.css" />
     <script charset="utf-8" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js" type="text/javascript" ></script>
-    <script type="text/javascript" src="../dist/js/all.min.js"></script>
+    <script type="text/javascript" src="../dist/js/vjs.min.js"></script>
 </head>
 <body class="page-selectvideo">
     <div class="wrapper">
         <div class="content">
-            <div class="logo">
-                <img src="/dist/images/logo.png" alt=""/>
-            </div>
+            <!--<div class="logo">-->
+                <!--<img src="/dist/images/logo.png" alt=""/>-->
+            <!--</div>-->
             <div class="role-content">
-                <p class="t1"><strong>与你分享</strong></p>
-                <p class="t2">芭蕾舞演员 <strong>谭元元</strong>  的视频<br>
-                    希望她能为你带来一丝灵感与启发</p>
+                <p class="t1"><strong>COACH 追梦女性</strong></p>
+                <p class="t2">芭蕾舞演员 <strong>谭元元</strong></p>
+                <div class="video-block">
+                    <!--<div class="btn-play"></div>-->
+                    <div class="videoplayer" id="mod_player"></div>
+                </div>
                 <p class="t3">
-                    <strong>芭蕾舞演员</strong>
+                    她是华人世界的第一芭蕾舞者，<br>
+                    在舞台的光芒后，阴影也如影随形。<br>
+                    现在的她，更愿意听从上天的安排，<br>
+                    因热爱而发光，因包容，而无所不能。
                 </p>
                 <p class="t4">
-                    <span class="quotation l-quotation"></span>在舞台的光芒后，阴影也如影随形<span class="quotation r-quotation"></span>
+                    <span class="quotation l-quotation"></span>包容时光的流转，舞出人生的精彩<span class="quotation r-quotation"></span>
                 </p>
-            </div>
-            <div class="video-block">
-                <!--<div class="btn-play"></div>-->
-                <div class="videoplayer" id="mod_player"></div>
             </div>
             <div class="btn btn-go">游览更多</div>
         </div>
 
     </div>
 
-    <script>
-        $(document).ready(function(){
-            var video = new tvp.VideoInfo();
-            video.setVid('k0334c3niao');
-            var player = new tvp.Player();
-            player.create({
-                width  : '100%',
-                height : '100%',
-                video  : video,
-                playerType: 'html5',
-                modId  : "mod_player",
-                autoplay: true
-            });
-
-        });
-
-
-    </script>
 
 
 

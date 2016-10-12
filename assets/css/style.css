@@ -469,22 +469,24 @@ html, body {
 .role-content {
   font-size: 0.28rem;
   text-align: center;
-  line-height: 1.8;
 }
 .role-content p {
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
 }
 .role-content .t1 {
-  font-size: 0.36rem;
+  font-size: 0.52rem;
   font-weight: bold;
 }
 .role-content .t2 strong {
   font-size: 0.3rem;
   font-weight: bold;
 }
-.role-content .t3 {
-  font-size: 0.3rem;
-  font-weight: bold;
+.role-content .t3, .role-content .t4 {
+  font-size: 0.26rem;
+  line-height: 1.8;
+}
+.role-content .t4 {
+  margin-bottom: 1rem;
 }
 .role-content .quotation {
   display: inline-block;
@@ -501,7 +503,7 @@ html, body {
 .page-selectvideo .video-block {
   width: 5.5rem;
   height: 3rem;
-  margin: 0.8rem auto 1rem;
+  margin: 0.5rem auto 0.5rem;
 }
 
 .video-block {
