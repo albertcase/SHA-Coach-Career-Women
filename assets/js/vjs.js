@@ -74,8 +74,8 @@
                 desEle = $('.t3'),
                 introEle = $('.t4');
             var titleHtml = vjson[i].title+'<strong>'+vjson[i].name+'</strong>',
-                desHtml = vjson[i].title+'<strong>'+vjson[i].des+'</strong>',
-                introHtml = vjson[i].title+'<strong>'+vjson[i].intro+'</strong>';
+                desHtml = '<strong>'+vjson[i].des+'</strong>',
+                introHtml = '<strong>'+vjson[i].intro+'</strong>';
             titleEle.html(titleHtml);
             desEle.html(desHtml);
             introEle.html(introHtml);
