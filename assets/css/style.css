@@ -422,6 +422,11 @@ html, body {
   font-size: 0.3rem;
   letter-spacing: 1px;
 }
+.btn a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
 
 .qa-list {
   box-sizing: border-box;
@@ -478,6 +483,8 @@ html, body {
   font-weight: bold;
 }
 .role-content .t2 strong {
+  display: inline-block;
+  margin-left: 0.1rem;
   font-size: 0.3rem;
   font-weight: bold;
 }

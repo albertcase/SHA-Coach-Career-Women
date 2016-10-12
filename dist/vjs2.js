@@ -61,7 +61,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
         },
         {
             name:'谭元元',
-            title:'芭蕾舞演员 ',
+            title:'芭蕾舞演员',
             src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
             vid:'k0334c3niao',
             des:'她是华人世界的第一芭蕾舞者，<br>在舞台的光芒后，阴影也如影随形。<br>现在的她，更愿意听从上天的安排，<br>因热爱而发光，因包容，而无所不能。',
@@ -69,7 +69,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
         },
         {
             name:'陈漫',
-            title:'时尚摄影师  ',
+            title:'时尚摄影师',
             src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
             vid:'k0334c3niao',
             des:'陈漫以女性特有的包容力转化着生命中的一切。<br>她更打破界限，接纳自己所有的可能。<br>生命有限，她选择专注于热爱，<br>创造包容一切的无限。',
@@ -85,7 +85,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
         },
         {
             name:'黄韵玲',
-            title:'音乐制作人 ',
+            title:'音乐制作人',
             src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
             vid:'k0334c3niao',
             des:'当青春渐逝，黄韵玲已成为了更纯粹的自己<br>那个为音乐追梦，为爱而创作的自己。<br> 当她唱起最爱的歌，<br> 时光无碍，热爱永存。',
@@ -102,14 +102,26 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
 
     $(document).ready(function(){
 
-        var vid = getParameterByName('vid');
-        console.log(vid);
+        //append content
         function loadingFirst(vid){
-
-
-
+            var i=vid || 0;
+            var titleEle = $('.t2'),
+                desEle = $('.t3'),
+                introEle = $('.t4');
+            var titleHtml = vjson[i].title+'<strong>'+vjson[i].name+'</strong>',
+                desHtml = vjson[i].title+'<strong>'+vjson[i].des+'</strong>',
+                introHtml = vjson[i].title+'<strong>'+vjson[i].intro+'</strong>';
+            titleEle.html(titleHtml);
+            desEle.html(desHtml);
+            introEle.html(introHtml);
         };
-        loadingFirst();
+
+        var nowVid = getParameterByName('vid');
+        if(nowVid<vjson.length && nowVid>-1){
+            loadingFirst(nowVid);
+        }else{
+            loadingFirst(0);
+        }
 
         var video = new tvp.VideoInfo();
         video.setVid('k0334c3niao');

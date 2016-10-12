@@ -42,6 +42,11 @@ html,body{
   text-align: center;
   font-size: 0.3rem;
   letter-spacing: 1px;
+  a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 //qa list
@@ -101,6 +106,8 @@ html,body{
   }
   .t2{
     strong{
+      display: inline-block;
+      margin-left: 0.1rem;
       font-size: 0.3rem;
       font-weight: bold;
     }
