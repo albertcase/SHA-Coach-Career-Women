@@ -139,7 +139,17 @@ html,body{
     margin: 0.5rem auto 0.5rem;
   }
 }
+
 //apply flex layout
+.video-wrap{
+  &.show{
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .video-block{
   position: relative;
   background: #000;

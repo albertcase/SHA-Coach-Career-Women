@@ -100,6 +100,20 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
+    function videoPlay(tvid){
+        var video = new tvp.VideoInfo();
+        video.setVid(tvid);
+        var player = new tvp.Player();
+        player.create({
+            width  : '100%',
+            height : '100%',
+            video  : video,
+            playerType: 'html5',
+            modId  : "mod_player",
+            autoplay: false
+        });
+    }
+
     $(document).ready(function(){
 
         //append content
@@ -116,24 +130,28 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
             introEle.html(introHtml);
         };
 
-        var nowVid = getParameterByName('vid');
+        var nowVid = getParameterByName('vid') || 0;
         if(nowVid<vjson.length && nowVid>-1){
             loadingFirst(nowVid);
         }else{
             loadingFirst(0);
         }
 
-        var video = new tvp.VideoInfo();
-        video.setVid('k0334c3niao');
-        var player = new tvp.Player();
-        player.create({
-            width  : '100%',
-            height : '100%',
-            video  : video,
-            playerType: 'html5',
-            modId  : "mod_player",
-            autoplay: false
-        });
+        videoPlay(vjson[nowVid].vid);
+        //start play
+    //    $('.btn-play').on('touchstart',function(){
+    //
+    //        $('.video-wrap').addClass('show');
+    //        videoPlay(vjson[nowVid].vid);
+    //
+    //    });
+    //
+    ////    close wrap,stop play
+    //    $('.btn-closevideo').on('touchstart',function(){
+    //
+    //        $('.videoplayer>div').remove();
+    //        $(this).parent().removeClass('show');
+    //    });
 
     });
 
