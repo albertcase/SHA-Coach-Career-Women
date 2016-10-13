@@ -96,7 +96,7 @@
         };
 
         var nowVid = getParameterByName('vid') || 0;
-        if(Cookies.get('isplay') && Cookies.get('selectedid')){
+        if(Cookies.get('uuid') && Cookies.get('selectedid')){
             nowVid = Cookies.get('selectedid');
         }
 

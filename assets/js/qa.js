@@ -1,5 +1,5 @@
 ;(function(){
-    if(Cookies.get('isplay') && Cookies.get('selectedid')){
+    if(Cookies.get('uuid') && Cookies.get('selectedid')){
         window.location.href = window.location.origin+'/template/selectvideo.html?vid='+Cookies.get('selectedid');
     }
     //0:唐嫣
@@ -126,6 +126,16 @@
 
     ];
 
+    function guid() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
+        }
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+            s4() + '-' + s4() + s4() + s4();
+    }
+
 
     $(document).ready(function(){
 
@@ -234,13 +244,28 @@
                     loadAskAnswer(curAskIndex);
                 }else{
 
-                    Cookies.set('isplay', 'true');
-                    Cookies.set('selectedid', compareNum(score));
-                    var vid = compareNum(score);
-                    window.location.href = window.location.origin+'/template/selectvideo.html?vid='+vid;
-                    console.log(window.location.origin);
-                //    比较大小
-                    console.log('show'+videoName[compareNum(score)]+'视频');
+                    var uuid = guid();
+                    //submit answer and uid
+                    $.ajax({
+                        url:'/api/info',
+                        type:'POST',
+                        dataType:'json',
+                        data:{
+                            uuid:uuid,
+                            video:videoName[compareNum(score)]
+                        },
+                        success:function(data){
+
+                            Cookies.set('uuid', uuid);
+                            Cookies.set('selectedid', compareNum(score));
+                            var vid = compareNum(score);
+                            window.location.href = window.location.origin+'/template/selectvideo.html?vid='+vid;
+                            alert('你已经参与抽奖');
+                            enableSubmit = true;
+                        }
+                    });
+
+
 
                 }
             }
