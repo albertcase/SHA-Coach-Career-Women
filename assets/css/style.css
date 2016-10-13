@@ -506,9 +506,17 @@ html, body {
 }
 
 .page-selectvideo .video-block {
+  position: relative;
+  z-index: 100;
   width: 5.5rem;
   height: 3rem;
   margin: 0.5rem auto 0.5rem;
+  background: #000;
+  display: block;
+  padding: 1px;
+}
+.page-selectvideo .video-block .videoplayer {
+  background: #000;
 }
 
 .video-wrap.show {
@@ -522,11 +530,6 @@ html, body {
 .video-block {
   position: relative;
   background: #000;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .video-block .btn-play {
   position: relative;
@@ -578,6 +581,11 @@ html, body {
   color: #fff;
 }
 .page-videolist .video-list .video-block {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 33%;
   width: 50%;
   box-sizing: border-box;

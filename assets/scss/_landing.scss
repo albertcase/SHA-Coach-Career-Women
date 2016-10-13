@@ -173,8 +173,16 @@ html,body{
 //for video-block
 .page-selectvideo{
   .video-block{
+    position: relative;
+    z-index: 100;
     @include size(5.5rem,3rem);
     margin: 0.5rem auto 0.5rem;
+    background: #000;
+    display: block;
+    padding: 1px;
+    .videoplayer{
+      background: #000;
+    }
   }
 }
 
@@ -191,11 +199,6 @@ html,body{
 .video-block{
   position: relative;
   background: #000;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   .btn-play{
     position: relative;
     @include size(0.8rem,0.8rem);
@@ -247,6 +250,11 @@ html,body{
     border: #fff 2px solid;
     color: #fff;
     .video-block{
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       height: 33%;
       width: 50%;
       box-sizing: border-box;
