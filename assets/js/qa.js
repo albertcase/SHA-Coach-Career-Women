@@ -260,7 +260,6 @@
                             Cookies.set('selectedid', compareNum(score));
                             var vid = compareNum(score);
                             window.location.href = window.location.origin+'/template/selectvideo.html?vid='+vid;
-                            alert('你已经参与抽奖');
                             enableSubmit = true;
                         }
                     });
