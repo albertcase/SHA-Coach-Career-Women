@@ -17,16 +17,6 @@ $(document).ready(function(){
                 dataUrl: '',
                 success: function () {
                     console.log('share success to friend');
-                    CANSHAKE='1';
-                    $('.share').removeClass('show');
-                    gotoPin(1);
-                    service.addChance(function(data){
-                        if(data.code){
-                            //alert('获得一次抽奖机会');
-                        }else{
-                            alert('未登录');
-                        }
-                    });
 
                 },
                 cancel: function () {
@@ -46,16 +36,6 @@ $(document).ready(function(){
                 imgUrl: obj.img,
                 success: function () {
                     console.log('share success to timeline');
-                    CANSHAKE='1';
-                    gotoPin(1);
-                    $('.share').removeClass('show');
-                    service.addChance(function(data){
-                        if(data.code){
-                            //alert('获得一次抽奖机会');
-                        }else{
-                            alert('未登录');
-                        }
-                    });
                 },
                 cancel: function () {
 
