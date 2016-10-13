@@ -224,8 +224,11 @@ html,body{
 //for page-videolist
 .page-videolist{
   .slogan{
-    @include size(4.29rem,0.31rem);
+    //@include size(4.29rem,0.31rem);
     margin: 0.4rem auto;
+    font-size: 0.52rem;
+    font-weight: bold;
+    text-align: center;
   }
   .video-list{
     display: flex;

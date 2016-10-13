@@ -558,9 +558,10 @@ html, body {
 }
 
 .page-videolist .slogan {
-  width: 4.29rem;
-  height: 0.31rem;
   margin: 0.4rem auto;
+  font-size: 0.52rem;
+  font-weight: bold;
+  text-align: center;
 }
 .page-videolist .video-list {
   display: flex;
