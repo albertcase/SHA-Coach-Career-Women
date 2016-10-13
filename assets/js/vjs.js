@@ -65,7 +65,7 @@
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
-    function videoPlay(tvid){
+    function videoPlay(tvid,isautoplay){
         var video = new tvp.VideoInfo();
         video.setVid(tvid);
         var player = new tvp.Player();
@@ -75,7 +75,7 @@
             video  : video,
             playerType: 'html5',
             modId  : "mod_player",
-            autoplay: false
+            autoplay: isautoplay
         });
     }
 
@@ -102,21 +102,28 @@
             loadingFirst(0);
         }
 
-        videoPlay(vjson[nowVid].vid);
+        //for select video page
+        if($('body').hasClass('page-selectvideo')){
+            videoPlay(vjson[nowVid].vid,false);
+        }
         //start play
-    //    $('.btn-play').on('touchstart',function(){
-    //
-    //        $('.video-wrap').addClass('show');
-    //        videoPlay(vjson[nowVid].vid);
-    //
-    //    });
-    //
-    ////    close wrap,stop play
-    //    $('.btn-closevideo').on('touchstart',function(){
-    //
-    //        $('.videoplayer>div').remove();
-    //        $(this).parent().removeClass('show');
-    //    });
+        $('.btn-play').on('touchstart',function(){
+
+            //video list page
+            if(!$('body').hasClass('page-videolist')) return;
+            var id=$(this).parent().index();
+            $('.video-wrap').addClass('show');
+            videoPlay(vjson[id].vid,true);
+
+        });
+
+    //    close wrap,stop play
+        $('.btn-closevideo').on('touchstart',function(){
+            //video list page
+            if(!$('body').hasClass('page-videolist')) return;
+            $('.videoplayer>div').remove();
+            $(this).parent().removeClass('show');
+        });
 
     });
 
