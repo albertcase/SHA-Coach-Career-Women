@@ -127,9 +127,6 @@
 }).call(this);
 
 $(document).ready(function(){
-    //if(!Cookies.get('uuid')){
-    //    window.location.href = '/template/index.html';
-    //}
     var redpacket= new controller();
     redpacket.init();
 });
