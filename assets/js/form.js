@@ -1,16 +1,18 @@
 //redpacket
 ;(function(){
     'use strict';
+
     var controller = function(){
-        this.isShake = false;
-        this.mobileVal = '';
-        //if submitted and record user msg, hasLogged is true
-        this.hasLogged = false;
+       this.vjson = ['唐嫣','李微漪','谭元元','陈漫','欧铠淳','黄韵玲'];
     };
     controller.prototype = {
         init:function(){
 
             var self = this;
+
+            var sid = 0 || Cookies.get('selectedid');
+            $('.title .name').html(self.vjson[sid]);
+
             //bind all dom element
             self.submitForm();
         },
