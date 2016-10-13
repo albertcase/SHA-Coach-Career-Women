@@ -20,7 +20,8 @@
 
                     if(data.status){
                         //    success
-                        window.location.href = '/oauth?callback=/template/form.html';
+                    }else{
+                        window.location.href = '/oauth?callback=/template/form.html'
                     }
                 }
             });
