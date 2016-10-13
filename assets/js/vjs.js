@@ -96,6 +96,10 @@
         };
 
         var nowVid = getParameterByName('vid') || 0;
+        if(Cookies.get('isplay') && Cookies.get('selectedid')){
+            nowVid = Cookies.get('selectedid');
+        }
+
         if(nowVid<vjson.length && nowVid>-1){
             loadingFirst(nowVid);
         }else{
@@ -106,6 +110,7 @@
         if($('body').hasClass('page-selectvideo')){
             videoPlay(vjson[nowVid].vid,false);
         }
+
         //start play
         $('.btn-play').on('touchstart',function(){
 

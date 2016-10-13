@@ -1,5 +1,7 @@
 ;(function(){
-
+    if(Cookies.get('isplay') && Cookies.get('selectedid')){
+        window.location.href = window.location.origin+'/template/selectvideo.html?vid='+Cookies.get('selectedid');
+    }
     //0:唐嫣
     //1:李微漪
     //2:谭元元
@@ -229,6 +231,8 @@
                     loadAskAnswer(curAskIndex);
                 }else{
 
+                    Cookies.set('isplay', 'true');
+                    Cookies.set('selectedid', compareNum(score));
                     var vid = compareNum(score);
                     window.location.href = window.location.origin+'/template/selectvideo.html?vid='+vid;
                     console.log(window.location.origin);
@@ -240,8 +244,6 @@
 
 
         });
-
-
 
     });
 
