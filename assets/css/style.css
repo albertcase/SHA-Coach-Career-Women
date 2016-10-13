@@ -646,11 +646,20 @@ input[type="tel"] {
   margin-right: 0.1rem;
 }
 #form-contact .input-box {
+  position: relative;
   margin-bottom: 0.8rem;
 }
 #form-contact input[type="text"],
 #form-contact input[type="tel"] {
   font-size: 0.28rem;
+}
+
+.error {
+  position: absolute;
+  width: 100%;
+  bottom: -0.4rem;
+  font-size: 0.24rem;
+  color: #f00;
 }
 
 .videoplayer {
