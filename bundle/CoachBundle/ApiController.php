@@ -20,6 +20,19 @@ class ApiController extends Controller {
 		
 	}
 
+	public function oauthAction() {
+		$request = $this->Request();
+		$fields = array(
+			'url' => array('url', '3')
+		);
+		$request->validation($fields);
+		$url = $request->query->get('url');
+		$_SESSION['redirect_url'] = $url;
+		$WechatAPI = new \Lib\WechatAPI();
+		$WechatAPI->wechatAuthorize();
+		exit;
+	}
+
 	public function callbackAction() {
 		$request = $this->Request();
 		$fields = array(
