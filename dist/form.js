@@ -555,7 +555,6 @@ $(document).ready(function(){
                         success:function(data){
 
                             alert('你已经参与抽奖');
-                            enableSubmit = true;
                         }
                     });
 

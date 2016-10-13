@@ -223,7 +223,7 @@
 
     //    go next question
         var isNext = true;
-        $('.qa-list').on('click','.btn-go',function(){
+        $('.qa-list').on('touchstart','.btn-go',function(){
 
             var curAnswerIndex;
             //if selected
@@ -260,7 +260,6 @@
                             Cookies.set('selectedid', compareNum(score));
                             var vid = compareNum(score);
                             window.location.href = window.location.origin+'/template/selectvideo.html?vid='+vid;
-                            enableSubmit = true;
                         }
                     });
 
