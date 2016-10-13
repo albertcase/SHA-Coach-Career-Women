@@ -14,14 +14,14 @@ define("WX_APPID", 'wx737a6d5fe4d19c89');
 //微信商户id
 define("WX_BUSID", '1220782001');
 //Curio接口
-define("CURIO_AUTH_URL", 'http://coach.samesamechina.com/api/wechat/oauth/auth/3d3f5cd8-fbdd-4d49-9be2-a73bfbadf62c');
+define("CURIO_AUTH_URL", 'http://coach.samesamechina.com/api/wechat/oauth/auth/2ca02077-ec73-45e8-a97f-63595e7a653d');
 define("CURIO_TOKEN", 'zcBpBLWyAFy6xs3e7HeMPL9zWrd7Xy');
 define("CURIO_JS_ID", '8309bc61-3c78-41d5-a1be-2f9e9ca01e95');
 
 //Database config info
 define("DBHOST", '127.0.0.1');
 define("DBUSER", 'root');
-define("DBPASS", '');
+define("DBPASS", '1qazxsw2');
 define("DBNAME", 'coach_career_women');
 
 
