@@ -464,24 +464,27 @@ $(document).ready(function(){
 
             var self = this;
 
-            var sid = 0 || Cookies.get('selectedid');
-            $('.title .name').html(self.vjson[sid]);
-
-            //bind all dom element
-            self.submitForm();
             ///api/islogin
             $.ajax({
                 url:'/api/islogin',
                 type:'POST',
                 dataType:'json',
                 success:function(data){
+                    console.log(data);
 
-                   if(data.status){
-                   //    success
-                       window.location.href = '/oauth?callback=/template/form.html';
-                   }
+                    if(data.status){
+                        //    success
+                        window.location.href = '/oauth?callback=/template/form.html';
+                    }
                 }
             });
+
+            var sid = 0 || Cookies.get('selectedid');
+            $('.title .name').html(self.vjson[sid]);
+
+            //bind all dom element
+            self.submitForm();
+
 
         },
 
