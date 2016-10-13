@@ -49,15 +49,52 @@ html,body{
   }
 }
 
-//qa list
-.qa-list{
+.container{
   box-sizing: border-box;
   @include size(6.74rem,9.13rem);
   padding: 1.2rem 0.6rem;
   background: url("../images/layer-bg.png") no-repeat;
   background-size: 100%;
+  margin: 0 auto;
+}
+//welcome pin
+.pin-welcome{
+  text-align: center;
+  p{
+    margin-bottom: 0.4rem;
+  }
+  .title{
+    font-size: 0.42rem;
+    margin-bottom: 0.6rem;
+  }
+  .subtitle{
+    font-size: 0.28rem;
+  }
+  .t1{
+    font-size: 0.26rem;
+  }
+  .t2{
+    font-size: 0.22rem;
+    color: #5e5e5e;
+  }
+  .btn{
+    margin-bottom: 0.25rem;
+  }
+  .showrules{
+    font-size: 0.22rem;
+    text-decoration: underline;
+  }
+
+}
+
+//qa list
+.qa-list{
+  display: none;
   text-align: center;
   margin: 0 auto;
+  &.qa-list{
+    display: block;
+  }
   .ordernum{
     display: inline-block;
     margin-right: 0.1rem;

@@ -179,8 +179,24 @@
 
         }
 
-        //load default question
-        loadAskAnswer(curAskIndex);
+        //go question page
+        $('.pin-welcome .btn-go').on('touchstart',function(){
+            $('.pin-welcome').remove();
+            //load default question
+            loadAskAnswer(curAskIndex);
+            $('.qa-list').addClass('show');
+        });
+
+        //    open pop showrules
+        $('.showrules').on('touchstart',function(){
+            $('.popup').addClass('show');
+        });
+
+    //    close pop
+        $('.popup .btn-close').on('touchstart',function(){
+            $('.popup').removeClass('show');
+        });
+
 
     //    select answer
         $('.qa-list').on('touchstart','.item', function(){
