@@ -82,10 +82,21 @@ class DatabaseAPI extends Base {
 		return NULL;
 	}
 
-	public function saveSmsLog($uid, $mobile, $code, $lindid, $msg, $send_rs) {
-		$sql = "INSERT INTO `coach_mobile` SET `uid` = ?, `mobile` = ?, code = ?, lindid = ?, msg = ?, send_rs = ?";
+	public function saveVideo($uuid, $video) {
+		$sql = "INSERT INTO `coach_video` SET `uuid` = ?, video = ?";
 		$res = $this->db->prepare($sql); 
-		$res->bind_param("ssssss", $uid, $mobile, $code, $lindid, $msg, $send_rs);
+		$res->bind_param("ss", $uuid, $video);
+		if ($res->execute()) {
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function saveInfo($uuid, $uid, $name, $mobile, $address) {
+		$sql = "UPDATE `coach_info` SET `uuid` = ?, name = ?, mobile = ?, address = ? WHERE id = ?";
+		$res = $this->db->prepare($sql); 
+		$res->bind_param("sssss", $uuid, $name, $mobile, $address, $uid);
 		if ($res->execute()) {
 			return TRUE;
 		} else {
