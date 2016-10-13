@@ -380,6 +380,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
 
         //go question page
         $('.pin-welcome .btn-go').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', '一起追梦']);
             $('.pin-welcome').remove();
             //load default question
             loadAskAnswer(curAskIndex);
@@ -388,11 +389,13 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
 
         //    open pop showrules
         $('.showrules').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', '显示活动细则']);
             $('.popup').addClass('show');
         });
 
     //    close pop
         $('.popup .btn-close').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', '关闭活动细则']);
             $('.popup').removeClass('show');
         });
 
