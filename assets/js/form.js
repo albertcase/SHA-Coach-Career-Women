@@ -70,17 +70,18 @@
                         name = document.getElementById('input-name').value,
                         address = document.getElementById('input-address').value;
                     $.ajax({
-                        url:'/api/islogin',
+                        url:'/api/info',
                         type:'POST',
                         dataType:'json',
                         data:{
-                            phonenumber:phonenumber,
+                            mobile:phonenumber,
                             name:name,
                             address:address
                         },
                         success:function(data){
 
-                            console.log(data);
+                            alert('你已经参与抽奖');
+                            enableSubmit = true;
                         }
                     });
 
