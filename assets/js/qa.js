@@ -193,7 +193,7 @@
 
         //go question page
         $('.pin-welcome .btn-go').on('touchstart',function(){
-            _hmt.push(['_trackEvent', 'buttons', 'click', '一起追梦']);
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'GoQuestionPage']);
             $('.pin-welcome').remove();
             //load default question
             loadAskAnswer(curAskIndex);
@@ -202,13 +202,13 @@
 
         //    open pop showrules
         $('.showrules').on('touchstart',function(){
-            _hmt.push(['_trackEvent', 'buttons', 'click', '显示活动细则']);
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'OpenRulesPop']);
             $('.popup').addClass('show');
         });
 
     //    close pop
         $('.popup .btn-close').on('touchstart',function(){
-            _hmt.push(['_trackEvent', 'buttons', 'click', '关闭活动细则']);
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'CloseRulesPop']);
             $('.popup').removeClass('show');
         });
 
@@ -224,7 +224,7 @@
     //    go next question
         var isNext = true;
         $('.qa-list').on('touchstart','.btn-go',function(){
-
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'nextButton']);
             var curAnswerIndex;
             //if selected
             if($('.qa-list .item').hasClass('selected')){
@@ -242,8 +242,9 @@
                 if(curAskIndex<qlist.length-1){
                     curAskIndex++;
                     loadAskAnswer(curAskIndex);
+                    _hmt.push(['_trackEvent', 'buttons', 'click', 'BtnQue'+curAskIndex]);
                 }else{
-
+                    _hmt.push(['_trackEvent', 'buttons', 'click', 'BtnQue5']);
                     var uuid = guid();
                     //submit answer and uid
                     $.ajax({

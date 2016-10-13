@@ -565,12 +565,25 @@ $(document).ready(function(){
             videoPlay(vjson[nowVid].vid,false);
         }
 
+        $('.page-selectvideo #mod_player').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'SinglePlayVideo'+nowVid]);
+        });
+
+        $('.page-selectvideo .btn-go').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'GoVideoListPage']);
+        });
+
+        //video list
+        $('.page-videolist .btn-go').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'GoFormPage']);
+        });
+
         //start play
         $('.btn-play').on('touchstart',function(){
-
             //video list page
             if(!$('body').hasClass('page-videolist')) return;
             var id=$(this).parent().attr('data-id');
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'VideoListPlayVideo'+id]);
             $('.video-wrap').addClass('show');
             videoPlay(vjson[id].vid,true);
 
@@ -578,6 +591,7 @@ $(document).ready(function(){
 
     //    close wrap,stop play
         $('.btn-closevideo').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', 'closeVideo']);
             //video list page
             if(!$('body').hasClass('page-videolist')) return;
             $('.videoplayer>div').remove();

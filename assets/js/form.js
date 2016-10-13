@@ -82,6 +82,7 @@
             var btnSubmit = document.getElementsByClassName('btn-submit')[0];
             var enableSubmit = true;
             btnSubmit.addEventListener('touchstart',function(){
+                _hmt.push(['_trackEvent', 'buttons', 'click', 'SubmitInfoForm']);
                 if(self.formValidate()){
                     if(!enableSubmit) return;
                     enableSubmit = false;
