@@ -102,7 +102,11 @@
                         },
                         success:function(data){
 
-                            alert('你已经参与抽奖');
+                            if(data.status==1){
+                                alert('你已经参与抽奖');
+                            }else{
+                                alert(data.msg);
+                            }
                         }
                     });
 
@@ -127,6 +131,9 @@
 }).call(this);
 
 $(document).ready(function(){
+    if(!Cookies.get('uuid')){
+        window.location.href = window.location.origin+'/template/index.html';
+    };
     var redpacket= new controller();
     redpacket.init();
 });
