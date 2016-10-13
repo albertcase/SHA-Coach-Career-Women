@@ -469,6 +469,20 @@ $(document).ready(function(){
 
             //bind all dom element
             self.submitForm();
+            ///api/islogin
+            $.ajax({
+                url:'/api/islogin',
+                type:'POST',
+                dataType:'json',
+                success:function(data){
+
+                   if(data.status){
+                   //    success
+                       window.location.href = '/oauth?callback=/template/form.html';
+                   }
+                }
+            });
+
         },
 
         formValidate:function(){
