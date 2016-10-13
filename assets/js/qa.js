@@ -1,5 +1,7 @@
 ;(function(){
-
+    if(Cookies.get('isplay') && Cookies.get('selectedid')){
+        window.location.href = window.location.origin+'/template/selectvideo.html?vid='+Cookies.get('selectedid');
+    }
     //0:唐嫣
     //1:李微漪
     //2:谭元元
@@ -179,8 +181,27 @@
 
         }
 
-        //load default question
-        loadAskAnswer(curAskIndex);
+        //go question page
+        $('.pin-welcome .btn-go').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', '一起追梦']);
+            $('.pin-welcome').remove();
+            //load default question
+            loadAskAnswer(curAskIndex);
+            $('.qa-list').addClass('show');
+        });
+
+        //    open pop showrules
+        $('.showrules').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', '显示活动细则']);
+            $('.popup').addClass('show');
+        });
+
+    //    close pop
+        $('.popup .btn-close').on('touchstart',function(){
+            _hmt.push(['_trackEvent', 'buttons', 'click', '关闭活动细则']);
+            $('.popup').removeClass('show');
+        });
+
 
     //    select answer
         $('.qa-list').on('touchstart','.item', function(){
@@ -205,7 +226,6 @@
 
             if(isNext){
                 //    go next
-                console.log(curAskIndex);
                 curAnswerIndex = $('.item.selected').index();
                 addScore(qlist[curAskIndex].answer[curAnswerIndex].tovideo);
 
@@ -214,21 +234,19 @@
                     loadAskAnswer(curAskIndex);
                 }else{
 
+                    Cookies.set('isplay', 'true');
+                    Cookies.set('selectedid', compareNum(score));
                     var vid = compareNum(score);
                     window.location.href = window.location.origin+'/template/selectvideo.html?vid='+vid;
                     console.log(window.location.origin);
                 //    比较大小
                     console.log('show'+videoName[compareNum(score)]+'视频');
 
-
-
                 }
             }
 
 
         });
-
-
 
     });
 

@@ -8,8 +8,18 @@
     <meta name="x5-fullscreen" content="true">
     <meta name="full-screen" content="yes">
     <link rel="stylesheet" type="text/css" href="../dist/css/style.css" />
-    <script charset="utf-8" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-    <script type="text/javascript" src="../dist/js/all.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?ea50e1cbd3cfd63d8df14e3c437044dd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script src="http://coach.samesamechina.com/api/v1/js/9b66099d-abde-4629-b5fe-1b2e1f2a9652/wechat"></script>
+    <script src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="../dist/js/vjs.min.js"></script>
 </head>
 <body class="page-videolist">
 <div class="wrapper">
@@ -21,35 +31,44 @@
             <img src="/dist/images/slogan.png" alt=""/>
         </div>
         <div class="video-list">
-            <div class="video-block video-block-1">
-                <div class="title">芭蕾舞演员</div>
-                <div class="name">谭元元</div>
+            <div class="video-block video-block-1" data-id="5">
+                <div class="title">音乐制作人</div>
+                <div class="name">黄韵玲</div>
                 <div class="btn-play"></div>
             </div>
-            <div class="video-block video-block-2">
-                <div class="title">芭蕾舞演员</div>
-                <div class="name">谭元元</div>
+            <div class="video-block video-block-2" data-id="4">
+                <div class="title">游泳运动员</div>
+                <div class="name">欧铠淳</div>
                 <div class="btn-play"></div>
             </div>
-            <div class="video-block video-block-3">
-                <div class="title">芭蕾舞演员</div>
-                <div class="name">谭元元</div>
+            <div class="video-block video-block-6" data-id="3">
+                <div class="title">时尚摄影师</div>
+                <div class="name">陈 漫</div>
                 <div class="btn-play"></div>
             </div>
-            <div class="video-block video-block-4">
-                <div class="title">芭蕾舞演员</div>
-                <div class="name">谭元元</div>
+            <div class="video-block video-block-3" data-id="0">
+                <div class="title">演    员</div>
+                <div class="name">唐 嫣</div>
                 <div class="btn-play"></div>
             </div>
-            <div class="video-block video-block-5">
+            <div class="video-block video-block-4" data-id="1">
+                <div class="title">画   家</div>
+                <div class="name">李微漪</div>
+                <div class="btn-play"></div>
+            </div>
+            <div class="video-block video-block-5" data-id="2">
                 <div class="title">芭蕾舞演员</div>
                 <div class="name">谭元元</div>
                 <div class="btn-play"></div>
             </div>
         </div>
-        <div class="btn btn-go">点击填写信息抽取精美礼品</div>
+        <div class="btn btn-go"><a href="form.html">点击填写信息抽取精美礼品</a></div>
     </div>
 
+</div>
+<div class="video-wrap">
+    <div class="videoplayer" id="mod_player"></div>
+    <div class="btn-closevideo"></div>
 </div>
 
 

@@ -14,7 +14,9 @@ var path = {
     all:['./template/*.html','./assets/css/*.css','./assets/js/*.js','./assets/js/lib/*.js'],
     template:['./template/*.html'],
     css:['./assets/css/*.css'],
-    js:['./assets/js/lib/zepto.min.js','./assets/js/rem.js','./assets/js/qa.js'],
+    js:['./assets/js/lib/zepto.min.js','./assets/js/rem.js','./assets/js/lib/cookie.js','./assets/js/common.js','./assets/js/wxshare.js','./assets/js/qa.js'],
+    selectvjs:['./assets/js/lib/zepto.min.js','./assets/js/rem.js','./assets/js/lib/cookie.js','./assets/js/common.js','./assets/js/wxshare.js','./assets/js/vjs.js'],
+    formjs:['./assets/js/lib/zepto.min.js','./assets/js/rem.js','./assets/js/lib/cookie.js','./assets/js/common.js','./assets/js/wxshare.js','./assets/js/form.js'],
     staticFolder:['./assets/images','./assets/font','./assets/video']
 };
 // Browser-sync
@@ -56,10 +58,26 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
+gulp.task('scripts_vjs', function() {
+    return gulp.src(path.selectvjs)
+        .pipe(concat('vjs2.js'))
+        .pipe(gulp.dest('dist'))
+        .pipe(rename('vjs.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+});
+gulp.task('scripts_formjs', function() {
+    return gulp.src(path.formjs)
+        .pipe(concat('form.js'))
+        .pipe(gulp.dest('dist'))
+        .pipe(rename('form.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+});
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('assets/js/*.js', ['scripts']);
+    gulp.watch('assets/js/*.js', ['scripts','scripts_vjs','scripts_formjs']);
     gulp.watch('assets/css/*.css',['css']);
 });
 
