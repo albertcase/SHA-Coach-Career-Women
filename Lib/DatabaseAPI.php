@@ -82,18 +82,6 @@ class DatabaseAPI extends Base {
 		return NULL;
 	}
 
-	public function getHeadimgurlByOpenid($openid) {
-		$sql = "SELECT headimgurl  FROM `coach_oauth` WHERE `openid` = ?"; 
-		$res = $this->db->prepare($sql);
-		$res->bind_param("s", $openid);
-		$res->execute();
-		$res->bind_result($headimgurl);
-		if($res->fetch()) {
-			return $headimgurl;
-		}
-		return '';
-	}
-
 	public function saveSmsLog($uid, $mobile, $code, $lindid, $msg, $send_rs) {
 		$sql = "INSERT INTO `coach_mobile` SET `uid` = ?, `mobile` = ?, code = ?, lindid = ?, msg = ?, send_rs = ?";
 		$res = $this->db->prepare($sql); 
