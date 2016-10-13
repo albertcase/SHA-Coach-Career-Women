@@ -47,7 +47,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
             name:'唐嫣',
             title:'演员',
             src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
-            vid:'k0334c3niao',
+            vid:'v0334ddnhwb',
             des:'一出道就广受欢迎的唐嫣，<br> 演艺事业并非永远一帆风顺，<br> 现在的她越来越懂得想品尝梦想的甜蜜，<br>先要坦然包容其中的苦涩。',
             intro:'包容迟到的赞许，绽放纯粹的光芒'
         },
@@ -62,8 +62,8 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
         {
             name:'谭元元',
             title:'芭蕾舞演员',
-            src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
-            vid:'k0334c3niao',
+            src:'http://static.video.qq.com/TPout.swf?vid=o0334kns54u&auto=0',
+            vid:'o0334kns54u',
             des:'她是华人世界的第一芭蕾舞者，<br>在舞台的光芒后，阴影也如影随形。<br>现在的她，更愿意听从上天的安排，<br>因热爱而发光，因包容，而无所不能。',
             intro:'包容时光的流转，舞出人生的精彩'
         },
@@ -78,7 +78,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
         {
             name:'欧铠淳',
             title:'游泳运动员',
-            src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
+            src:'http://m.v.qq.com/play/play.html?coverid=&vid=k0334c3niao&ptag=4_5.0.0.13467_wxf',
             vid:'k0334c3niao',
             des:'她，被誉为香港“人鱼公主”。<br>和夺冠相比，她更享受投入其中的过程，<br> 真正的包容，是全然接纳自己的局限，<br> 而永不放弃地享受拼搏的过程。',
             intro:'包容竞争的代价，享受拼搏的快乐'
@@ -146,7 +146,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
 
             //video list page
             if(!$('body').hasClass('page-videolist')) return;
-            var id=$(this).parent().index();
+            var id=$(this).parent().attr('data-id');
             $('.video-wrap').addClass('show');
             videoPlay(vjson[id].vid,true);
 

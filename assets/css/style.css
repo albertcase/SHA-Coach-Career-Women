@@ -456,6 +456,7 @@ html, body {
 }
 .qa-list .answer .item.selected {
   background: url("../images/icon-selected.png") 6px center no-repeat;
+  background-size: auto 40%;
 }
 .qa-list .answer .item.unselect {
   color: #d5d5d5;

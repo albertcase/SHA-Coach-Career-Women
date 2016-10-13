@@ -114,6 +114,7 @@ html,body{
       padding: 0.2rem 0 0.2rem 0.6rem;
       &.selected{
         background: url("../images/icon-selected.png") 6px center no-repeat;
+        background-size: auto 40%;
       }
       &.unselect{
         color: #d5d5d5;
