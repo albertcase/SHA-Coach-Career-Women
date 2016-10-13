@@ -89,7 +89,7 @@
                 introEle = $('.t4');
             var titleHtml = vjson[i].title+'<strong>'+vjson[i].name+'</strong>',
                 desHtml = '<strong>'+vjson[i].des+'</strong>',
-                introHtml = '<strong>'+vjson[i].intro+'</strong>';
+                introHtml = '<span class="quotation l-quotation"></span>'+vjson[i].intro+'<span class="quotation r-quotation"></span>';
             titleEle.html(titleHtml);
             desEle.html(desHtml);
             introEle.html(introHtml);
