@@ -47,6 +47,43 @@ class ApiController extends Controller {
 		exit;
 	}
 
+	public function submitAction() {
+		$request = $this->Request();
+		$fields = array(
+			'uuid' => array('notnull', '3'),
+			'video' => array('notnull', '3')
+		);
+		$request->validation($fields);
+		$uuid = $request->request->get('uuid');
+		$video = $request->request->get('video');
+		$databaseapi = new \Lib\DatabaseAPI();
+		$databaseapi->saveVideo($uuid, $video);
+		return $this->statusPrint(1, '提交成功');
+	}
+
+	public function infoAction() {
+		$UserAPI = new \Lib\UserAPI();
+		$user = $UserAPI->userLoad(true);
+		if (!$user) {
+			return $this->statusPrint(0, '未登录');
+		}
+		$request = $this->Request();
+		$fields = array(
+			'uuid' => array('notnull', '3'),
+			'name' => array('notnull', '3'),
+			'mobile' => array('mobile', '3'),
+			'address' => array('notnull', '3')
+		);
+		$request->validation($fields);
+		$uuid = $request->request->get('uuid');
+		$name = $request->request->get('name');
+		$mobile = $request->request->get('mobile');
+		$address = $request->request->get('address');
+		$databaseapi = new \Lib\DatabaseAPI();
+		$databaseapi->saveInfo($uuid, $user->uid, $name, $mobile, $address);
+		return $this->statusPrint(1, '提交成功');
+	}
+
 	public function getdataAction() {
 		$data = $GLOBALS['HTTP_RAW_POST_DATA'];	
 		$data = json_decode($data, true);

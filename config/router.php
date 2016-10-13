@@ -8,4 +8,5 @@ $routers['/callback'] = array('CoachBundle\Api', 'callback');
 $routers['/api/test'] = array('CoachBundle\Api', 'test');
 $routers['/api/islogin'] = array('CoachBundle\Api', 'islogin');
 $routers['/api/info'] = array('CoachBundle\Api', 'info');
+$routers['/api/submit'] = array('CoachBundle\Api', 'submit');
 $routers['/oauth'] = array('CoachBundle\Api', 'oauth');
