@@ -473,8 +473,8 @@ $(document).ready(function(){
         {
             name:'李微漪',
             title:'画家',
-            src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
-            vid:'k0334c3niao',
+            src:'http://v.qq.com/x/page/l0336al4f1r.html',
+            vid:'l0336al4f1r',
             des:'李微漪用她和“狼儿子”格林的故事，<br>试图探索的美好未来。<br>李微漪渴望所有人回归温暖的包容之心，<br>让爱流动，让大美重回天地间。',
             intro:'包容冷漠与伤害，用爱温暖地治愈'
         },
@@ -505,8 +505,8 @@ $(document).ready(function(){
         {
             name:'黄韵玲',
             title:'音乐制作人',
-            src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
-            vid:'k0334c3niao',
+            src:'http://v.qq.com/x/page/e0336dhbywr.html ',
+            vid:'e0336dhbywr',
             des:'当青春渐逝，黄韵玲已成为了更纯粹的自己<br>那个为音乐追梦，为爱而创作的自己。<br> 当她唱起最爱的歌，<br> 时光无碍，热爱永存。',
             intro:'包容时光的蹉跎，停驻心动的瞬间'
         }
