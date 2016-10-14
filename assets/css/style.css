@@ -78,10 +78,14 @@ html {
 }
 
 body {
-  font-family: 'Songti','Clarendon',serif;
+  font-family: 'Songti',serif;
   line-height: 1.5;
   font-size: .24rem;
   color: #000;
+}
+
+.font-en {
+  font-family: 'Clarendon',serif;
 }
 
 * {
