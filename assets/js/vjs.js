@@ -35,8 +35,8 @@
         {
             name:'陈漫',
             title:'时尚摄影师',
-            src:'http://m.v.qq.com/play/play.html?coverid=&vid=v0334ddnhwb&ptag=4_5.0.0.13467_wxf',
-            vid:'k0334c3niao',
+            src:'http://v.qq.com/x/page/u0336ia5clh.html',
+            vid:'u0336ia5clh',
             des:'陈漫以女性特有的包容力转化着生命中的一切。<br>她更打破界限，接纳自己所有的可能。<br>生命有限，她选择专注于热爱，<br>创造包容一切的无限。',
             intro:'包容真我的执着，超越内心的可能'
         },
