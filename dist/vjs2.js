@@ -570,6 +570,10 @@ $(document).ready(function(){
             loadingFirst(0);
         }
 
+        if(navigator.userAgent.indexOf('Android')>-1){
+            $('body').addClass('device-andriod');
+        }
+
         //for select video page
         if($('body').hasClass('page-selectvideo')){
             $('.page-selectvideo .video-block').addClass('vb-'+nowVid);
