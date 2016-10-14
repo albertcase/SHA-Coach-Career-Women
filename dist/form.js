@@ -556,6 +556,7 @@ $(document).ready(function(){
                     var phonenumber = document.getElementById('input-mobile').value,
                         name = document.getElementById('input-name').value,
                         address = document.getElementById('input-address').value;
+                    Common.msgBox('loading...');
                     $.ajax({
                         url:'/api/info',
                         type:'POST',
@@ -567,7 +568,7 @@ $(document).ready(function(){
                             address:address
                         },
                         success:function(data){
-
+                            $('.ajaxpop').remove();
                             enableSubmit = true;
                             if(data.status==1){
                                 Common.alertBox.add('你已经参与抽奖');
