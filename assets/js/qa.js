@@ -153,7 +153,7 @@
 
             //answer html
             for(var i=0;i<qlist[order].answer.length;i++){
-                AaContent = AaContent+'<li class="item"><span class="series">'+numSeries[i]+')</span>'+qlist[order].answer[i].des+'</li>';
+                AaContent = AaContent+'<li class="item"><span class="series font-en">'+numSeries[i]+')</span>'+qlist[order].answer[i].des+'</li>';
             }
 
             //innerHTML
