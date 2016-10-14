@@ -231,7 +231,7 @@
                 isNext = true;
             }else{
                 isNext = false;
-                alert('请选择');
+                Common.alertBox.add('请选择');
             }
 
             if(isNext){

@@ -407,6 +407,15 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
 
 }).call(this);
 
+$(document).ready(function(){
+
+	//close alert pop
+	$('body').on('touchstart','.btn-alert-ok',function(){
+		Common.alertBox.remove();
+	});
+
+});
+
 
 
 
@@ -557,9 +566,10 @@ $(document).ready(function(){
                         success:function(data){
 
                             if(data.status==1){
-                                alert('你已经参与抽奖');
+                                Common.alertBox.add('你已经参与抽奖');
                             }else{
                                 alert(data.msg);
+                                Common.alertBox.add(data.msg);
                             }
                         }
                     });

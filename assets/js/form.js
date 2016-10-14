@@ -103,9 +103,10 @@
                         success:function(data){
 
                             if(data.status==1){
-                                alert('你已经参与抽奖');
+                                Common.alertBox.add('你已经参与抽奖');
                             }else{
                                 alert(data.msg);
+                                Common.alertBox.add(data.msg);
                             }
                         }
                     });

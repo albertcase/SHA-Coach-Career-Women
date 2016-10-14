@@ -407,6 +407,15 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
 
 }).call(this);
 
+$(document).ready(function(){
+
+	//close alert pop
+	$('body').on('touchstart','.btn-alert-ok',function(){
+		Common.alertBox.remove();
+	});
+
+});
+
 
 
 
@@ -685,7 +694,7 @@ $(document).ready(function(){
                 isNext = true;
             }else{
                 isNext = false;
-                alert('请选择');
+                Common.alertBox.add('请选择');
             }
 
             if(isNext){

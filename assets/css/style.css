@@ -333,6 +333,45 @@ img {
     display: none;
   }
 }
+.alertpop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 102;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.alertpop .inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0.4rem 0.6rem;
+  background: #fff;
+  color: #000;
+  font-size: 0.32rem;
+  text-align: center;
+}
+.alertpop .msg {
+  margin-bottom: 0.3rem;
+  font-size: 0.32rem;
+}
+.alertpop .btn-alert-ok {
+  position: relative;
+  z-index: 999;
+  text-align: center;
+  width: 1.8rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background: #000;
+  color: #fff;
+  font-size: 0.28rem;
+}
+
 html, body {
   width: 100%;
   height: 100%;

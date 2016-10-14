@@ -407,6 +407,15 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
 
 }).call(this);
 
+$(document).ready(function(){
+
+	//close alert pop
+	$('body').on('touchstart','.btn-alert-ok',function(){
+		Common.alertBox.remove();
+	});
+
+});
+
 
 
 
