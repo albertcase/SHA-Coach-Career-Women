@@ -84,6 +84,8 @@
             $('.input-box input').on('keyup',function(){
                 self.formValidate();
             });
+
+
             btnSubmit.addEventListener('touchstart',function(){
                 _hmt.push(['_trackEvent', 'buttons', 'click', 'SubmitInfoForm']);
                 if(self.formValidate()){

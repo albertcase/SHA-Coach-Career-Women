@@ -412,6 +412,10 @@ $(document).ready(function(){
 	//close alert pop
 	$('body').on('touchstart','.btn-alert-ok',function(){
 		Common.alertBox.remove();
+		//for form page
+		if($('body').hasClass('page-form') && $(this).parent().find('.msg').html() == '你已经参与抽奖'){
+			window.location.href='/';
+		}
 	});
 
 });
@@ -547,6 +551,8 @@ $(document).ready(function(){
             $('.input-box input').on('keyup',function(){
                 self.formValidate();
             });
+
+
             btnSubmit.addEventListener('touchstart',function(){
                 _hmt.push(['_trackEvent', 'buttons', 'click', 'SubmitInfoForm']);
                 if(self.formValidate()){
