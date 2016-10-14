@@ -21,7 +21,7 @@
             width = 750 * dpr;
         }
 				if(width>height){
-					docEl.style.fontSize = 100 * (height / 750) + 'px';
+					docEl.style.fontSize = 100 * (height / 1207) + 'px';
 
 				}else{
 					docEl.style.fontSize = 100 * (width / 750) + 'px';
