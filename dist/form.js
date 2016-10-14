@@ -23,7 +23,7 @@ var Zepto=function(){function L(t){return null==t?String(t):j[S.call(t)]||"objec
             width = 750 * dpr;
         }
 				if(width/height>750/1207){
-					docEl.style.fontSize = 100 * (height / 1334) + 'px';
+					docEl.style.fontSize = 100 * (height / 1207) + 'px';
 
 				}else{
 					docEl.style.fontSize = 100 * (width / 750) + 'px';
