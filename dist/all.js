@@ -456,14 +456,14 @@ $(document).ready(function(){
     weixinshare({
         title1: '为梦想，你包容了什么？',
         des: '参与心理测试赢取由COACH追梦女性倾情赞助的礼物',
-        link: window.location.origin+'/template/index.html',
+        link: window.location.origin+'/index.html',
         img: 'http://careerwomen.samesamechina.com/dist/images/share.jpg'
     })
 
 });
 ;(function(){
     if(Cookies.get('uuid') && Cookies.get('selectedid')){
-        window.location.href = window.location.origin+'/template/selectvideo.html?vid='+Cookies.get('selectedid');
+        window.location.href = '/selectvideo.html?vid='+Cookies.get('selectedid');
     }
     //0:唐嫣
     //1:李微漪
@@ -723,7 +723,7 @@ $(document).ready(function(){
                             Cookies.set('uuid', uuid);
                             Cookies.set('selectedid', compareNum(score));
                             var vid = compareNum(score);
-                            window.location.href = /selectvideo.html?vid='+vid;
+                            window.location.href = '/selectvideo.html?vid='+vid;
                         }
                     });
 
