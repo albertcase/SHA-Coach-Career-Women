@@ -102,6 +102,7 @@
                         },
                         success:function(data){
 
+                            enableSubmit = true;
                             if(data.status==1){
                                 Common.alertBox.add('你已经参与抽奖');
                             }else{
