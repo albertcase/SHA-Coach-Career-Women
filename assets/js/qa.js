@@ -223,6 +223,7 @@
 
     //    go next question
         var isNext = true;
+        var enableSubmitVideo = true;
         $('.qa-list').on('touchstart','.btn-go',function(){
             _hmt.push(['_trackEvent', 'buttons', 'click', 'nextButton']);
             var curAnswerIndex;
@@ -246,6 +247,8 @@
                 }else{
                     _hmt.push(['_trackEvent', 'buttons', 'click', 'BtnQue5']);
                     var uuid = guid();
+                    if(enableSubmitVideo) return;
+                    enableSubmitVideo = false;
                     //submit answer and uid
                     $.ajax({
                         url:'/api/submit',
@@ -256,7 +259,6 @@
                             video:videoName[compareNum(score)]
                         },
                         success:function(data){
-
                             Cookies.set('uuid', uuid);
                             Cookies.set('selectedid', compareNum(score));
                             var vid = compareNum(score);
