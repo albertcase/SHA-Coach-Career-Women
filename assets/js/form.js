@@ -81,6 +81,9 @@
              */
             var btnSubmit = document.getElementsByClassName('btn-submit')[0];
             var enableSubmit = true;
+            $('.input-box input').on('keyup',function(){
+                self.formValidate();
+            });
             btnSubmit.addEventListener('touchstart',function(){
                 _hmt.push(['_trackEvent', 'buttons', 'click', 'SubmitInfoForm']);
                 if(self.formValidate()){
@@ -132,9 +135,9 @@
 }).call(this);
 
 $(document).ready(function(){
-    if(!Cookies.get('uuid')){
-        window.location.href = '/index.html';
-    };
+    //if(!Cookies.get('uuid')){
+    //    window.location.href = '/index.html';
+    //};
     var redpacket= new controller();
     redpacket.init();
 });
