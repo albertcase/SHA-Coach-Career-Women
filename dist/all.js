@@ -711,7 +711,7 @@ $(document).ready(function(){
                     var uuid = guid();
                     //submit answer and uid
                     $.ajax({
-                        url:'/api/info',
+                        url:'/api/submit',
                         type:'POST',
                         dataType:'json',
                         data:{
