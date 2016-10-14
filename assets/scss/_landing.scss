@@ -92,6 +92,7 @@ html,body{
   display: none;
   text-align: center;
   margin: 0 auto;
+  padding: 0 0.3rem;
   &.qa-list{
     display: block;
   }
@@ -111,10 +112,10 @@ html,body{
     font-size: 0.26rem;
     .item{
       margin-bottom: 0.3rem;
-      padding: 0.2rem 0 0.2rem 0.6rem;
+      padding: 0.2rem 0 0.2rem 0.05rem;
       &.selected{
-        background: url("../images/icon-selected.png") 6px center no-repeat;
-        background-size: auto 40%;
+        //background: url("../images/icon-selected.png") 6px center no-repeat;
+        //background-size: auto 40%;
       }
       &.unselect{
         color: #d5d5d5;

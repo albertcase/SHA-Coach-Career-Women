@@ -611,7 +611,7 @@ $(document).ready(function(){
             }
 
             //innerHTML
-            var qaInnerHtml = '<div class="ask"><span class="ordernum">'+(order+1)+'.</span>'+qlist[order].ask+'</div>'+
+            var qaInnerHtml = '<div class="ask">'+qlist[order].ask+'</div>'+
                 '<div class="answer"><ul class="list">'+AaContent+'</ul></div>'+
                 '<div class="btn btn-go">'+((order<maxNum-1)?'下一题':'查看结果')+'</div>';
 

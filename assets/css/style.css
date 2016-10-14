@@ -431,6 +431,7 @@ html, body {
   display: none;
   text-align: center;
   margin: 0 auto;
+  padding: 0 0.3rem;
 }
 .qa-list.qa-list {
   display: block;
@@ -452,11 +453,7 @@ html, body {
 }
 .qa-list .answer .item {
   margin-bottom: 0.3rem;
-  padding: 0.2rem 0 0.2rem 0.6rem;
-}
-.qa-list .answer .item.selected {
-  background: url("../images/icon-selected.png") 6px center no-repeat;
-  background-size: auto 40%;
+  padding: 0.2rem 0 0.2rem 0.05rem;
 }
 .qa-list .answer .item.unselect {
   color: #d5d5d5;
