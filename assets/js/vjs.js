@@ -73,6 +73,7 @@
             width  : '100%',
             height : '100%',
             video  : video,
+            pic: tvp.common.getVideoSnapMobile(tvid),
             playerType: 'html5',
             modId  : "mod_player",
             autoplay: isautoplay
@@ -108,6 +109,7 @@
 
         //for select video page
         if($('body').hasClass('page-selectvideo')){
+            $('.page-selectvideo .video-block').addClass('vb-'+nowVid);
             videoPlay(vjson[nowVid].vid,false);
         }
 
