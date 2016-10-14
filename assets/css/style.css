@@ -59,13 +59,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @font-face {
-  font-family: 'Futura';
-  src: url("../../assets/font/FuturaLTBook.ttf") format("truetype");
-  /* Safari, Android, iOS */
-}
-@font-face {
-  font-family: 'Didot';
-  src: url("../../assets/font/Didot.ttf") format("truetype");
+  font-family: 'Clarendon';
+  src: url("../font/Clarendon-Light.otf") format("truetype");
   /* Safari, Android, iOS */
 }
 @media all and (orientation: landscape) {
@@ -83,14 +78,10 @@ html {
 }
 
 body {
-  font-family: 'Songti',serif;
+  font-family: 'Songti','Clarendon',serif;
   line-height: 1.5;
   font-size: .24rem;
   color: #000;
-}
-
-body.lang-en {
-  font-family: 'Futura', sans-serif;
 }
 
 * {

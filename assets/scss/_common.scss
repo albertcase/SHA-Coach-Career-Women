@@ -33,12 +33,8 @@ $delay-8: 3200ms;
 $delay-9: 3600ms;
 
 @font-face {
-  font-family: 'Futura';
-  src: url('../../assets/font/FuturaLTBook.ttf')  format('truetype');/* Safari, Android, iOS */
-}
-@font-face {
-  font-family: 'Didot';
-  src: url('../../assets/font/Didot.ttf')  format('truetype');/* Safari, Android, iOS */
+  font-family: 'Clarendon';
+  src: url('../font/Clarendon-Light.otf')  format('truetype');/* Safari, Android, iOS */
 }
 
 @media all and (orientation: landscape){
@@ -54,32 +50,15 @@ $delay-9: 3600ms;
 html{
   -webkit-text-size-adjust: 100%;
 }
-//html,body{
-//  width: 100%;
-//  height: 100%;
-//}
-//hide iphone video button
-video::-webkit-media-controls-start-playback-button {
-  //display: none;
-  //background: red;
-}
 // common settings
 body {
-  font-family: 'Songti',serif;
+  font-family: 'Songti','Clarendon',serif;
   line-height: 1.5;
   font-size: .24rem;
   color: #000;
-  //position: absolute;
-  //width: 100%;
-  //height: 100%;
-  //top: 0;
-  //left: 0;
-  //bottom: 0;
-  //right: 0;
-  //overflow: auto;
 }
-body.lang-en{
-  font-family: 'Futura', sans-serif;
+.font-en{
+
 }
 * {
   -webkit-touch-callout:none;
