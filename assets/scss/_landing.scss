@@ -303,6 +303,13 @@ html,body{
         left: 50%;
         @include transform(translate(-50%,-50%));
       }
+      .des{
+        position: absolute;
+        font-size: 0.22rem;
+        bottom: 0.1rem;
+        left: 0;
+        width: 100%;
+      }
       .title,.name{
         margin-bottom: 0.15rem;
       }
