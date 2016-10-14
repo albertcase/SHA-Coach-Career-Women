@@ -21,7 +21,7 @@
                     if(data.status){
                         //    success
                     }else{
-                        window.location.href = '/oauth?callback=/template/form.html'
+                        window.location.href = '/oauth?callback=/form.html'
                     }
                 }
             });
@@ -132,7 +132,7 @@
 
 $(document).ready(function(){
     if(!Cookies.get('uuid')){
-        window.location.href = window.location.origin+'/template/index.html';
+        window.location.href = '/index.html';
     };
     var redpacket= new controller();
     redpacket.init();

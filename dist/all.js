@@ -723,7 +723,7 @@ $(document).ready(function(){
                             Cookies.set('uuid', uuid);
                             Cookies.set('selectedid', compareNum(score));
                             var vid = compareNum(score);
-                            window.location.href = window.location.origin+'/template/selectvideo.html?vid='+vid;
+                            window.location.href = /selectvideo.html?vid='+vid;
                         }
                     });
 

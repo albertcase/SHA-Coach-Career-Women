@@ -1,6 +1,6 @@
 ;(function(){
     if(Cookies.get('uuid') && Cookies.get('selectedid')){
-        window.location.href = window.location.origin+'/template/selectvideo.html?vid='+Cookies.get('selectedid');
+        window.location.href = '/selectvideo.html?vid='+Cookies.get('selectedid');
     }
     //0:唐嫣
     //1:李微漪
@@ -260,7 +260,7 @@
                             Cookies.set('uuid', uuid);
                             Cookies.set('selectedid', compareNum(score));
                             var vid = compareNum(score);
-                            window.location.href = window.location.origin+'/template/selectvideo.html?vid='+vid;
+                            window.location.href = '/selectvideo.html?vid='+vid;
                         }
                     });
 
