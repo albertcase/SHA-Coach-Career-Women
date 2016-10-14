@@ -710,8 +710,9 @@ $(document).ready(function(){
                 }else{
                     _hmt.push(['_trackEvent', 'buttons', 'click', 'BtnQue5']);
                     var uuid = guid();
-                    if(enableSubmitVideo) return;
+                    if(!enableSubmitVideo) return;
                     enableSubmitVideo = false;
+                    Common.msgBox('loading...');
                     //submit answer and uid
                     $.ajax({
                         url:'/api/submit',
