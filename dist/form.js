@@ -456,7 +456,7 @@ $(document).ready(function(){
     weixinshare({
         title1: '为梦想，你包容了什么？',
         des: '参与心理测试赢取由COACH追梦女性倾情赞助的礼物',
-        link: window.location.origin+'/template/index.html',
+        link: window.location.origin+'/index.html',
         img: 'http://careerwomen.samesamechina.com/dist/images/share.jpg'
     })
 
@@ -484,7 +484,7 @@ $(document).ready(function(){
                     if(data.status){
                         //    success
                     }else{
-                        window.location.href = '/oauth?callback=/template/form.html'
+                        window.location.href = '/oauth?callback=/form.html'
                     }
                 }
             });
@@ -595,7 +595,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     if(!Cookies.get('uuid')){
-        window.location.href = window.location.origin+'/template/index.html';
+        window.location.href = '/index.html';
     };
     var redpacket= new controller();
     redpacket.init();
