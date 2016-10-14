@@ -584,7 +584,8 @@ $(document).ready(function(){
             videoPlay(vjson[nowVid].vid,false);
         }
 
-        $('.page-selectvideo #mod_player').on('touchstart',function(){
+
+        $('.page-selectvideo').on('touchstart','#mod_player',function(){
             _hmt.push(['_trackEvent', 'buttons', 'click', 'SinglePlayVideo'+nowVid]);
         });
 
