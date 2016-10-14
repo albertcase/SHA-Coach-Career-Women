@@ -567,12 +567,7 @@ html, body {
   text-align: center;
 }
 .page-videolist .video-list {
-  display: flex;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  position: relative;
   width: 6.5rem;
   height: 7.25rem;
   box-sizing: border-box;
@@ -580,19 +575,34 @@ html, body {
   border: #fff 2px solid;
   color: #fff;
 }
-.page-videolist .video-list .video-block {
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 33%;
+.page-videolist .video-list .panel {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 50%;
+  height: 100%;
+}
+.page-videolist .video-list .r-panel {
+  left: 50%;
+}
+.page-videolist .video-list .video-block {
+  position: relative;
+  height: 33%;
+  width: 100%;
   box-sizing: border-box;
   text-align: center;
   border: #fff 1px solid;
   background: #000;
   line-height: 1;
+}
+.page-videolist .video-list .video-block .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .page-videolist .video-list .video-block .title, .page-videolist .video-list .video-block .name {
   margin-bottom: 0.15rem;

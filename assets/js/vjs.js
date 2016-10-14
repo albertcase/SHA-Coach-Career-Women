@@ -125,10 +125,10 @@
         });
 
         //start play
-        $('.btn-play').on('touchstart',function(){
+        $('.video-list .video-block').on('touchstart',function(){
             //video list page
             if(!$('body').hasClass('page-videolist')) return;
-            var id=$(this).parent().attr('data-id');
+            var id=$(this).attr('data-id');
             _hmt.push(['_trackEvent', 'buttons', 'click', 'VideoListPlayVideo'+id]);
             $('.video-wrap').addClass('show');
             videoPlay(vjson[id].vid,true);
