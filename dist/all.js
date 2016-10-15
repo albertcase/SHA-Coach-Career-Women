@@ -727,8 +727,8 @@ $(document).ready(function(){
                             video:videoName[compareNum(score)]
                         },
                         success:function(data){
-                            Cookies.set('uuid', uuid);
-                            Cookies.set('selectedid', compareNum(score));
+                            Cookies.set('uuid', uuid,{ expires: 100 });
+                            Cookies.set('selectedid', compareNum(score),{expires: 100});
                             var vid = compareNum(score);
                             window.location.href = '/selectvideo.html?vid='+vid;
                         }
