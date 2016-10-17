@@ -1,6 +1,6 @@
 ;(function(){
     if(Cookies.get('uuid') && Cookies.get('selectedid')){
-        window.location.href = '/selectvideo.html?vid='+Cookies.get('selectedid');
+        window.location.href = '/selectvideo.html?vid='+Cookies.get('selectedid')+'&timestamp='+Math.round(new Date().getTime()/1000);
     }
     //0:唐嫣
     //1:李微漪
